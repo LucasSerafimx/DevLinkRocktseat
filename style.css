@@ -28,6 +28,7 @@ body{
   /* Cover para completar a tela/ sem usar variael */
    /* background: url(./assets/bg-mobile.jpg) no-repeat top center/cover; */
    background: var(--bg-url) no-repeat top center/cover;
+   height: 99vh;
 }
 
 body *{
@@ -36,9 +37,10 @@ body *{
 }
 
 #container{
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /* height: 712px; */
-  margin: 20px auto;
+  margin: 5px auto;
   padding: 0 24px;
 }
 
@@ -166,4 +168,14 @@ footer a{
   text-decoration: none;
   color: blueviolet;
   font-weight: bold;
+}
+
+@media (min-width: 700px){
+  :root{
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  
+  .light{
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
